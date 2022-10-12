@@ -7,7 +7,7 @@
 from urllib.request import urlopen
 
 url = "http://www.baidu.com"
-# 获取相应
+# 获取响应
 resp = urlopen(url)
 
 # 控制台打印内容
