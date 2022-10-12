@@ -11,7 +11,7 @@ url = "http://www.baidu.com"
 resp = urlopen(url)
 
 # 控制台打印内容
-print(resp.read().decode("utf-8"))
+# print(resp.read().decode("utf-8"))
 
 # 创建一个文件 mode=w是 打开写入，首先截断文件 , encode是用于对文件进行解码或编码的编码名称
 with open("mybaidu.html", mode="w", encoding="utf-8") as f:
