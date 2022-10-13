@@ -1,12 +1,21 @@
 # 笔记
+
 <!-- TOC -->
 * [笔记](#)
 * [使用pip管理Python包](#pippython)
 * [修改pip下载源](#pip)
+* [变量](#)
+  * [数据类型](#)
+    * [Number 数值](#number-)
+    * [boolean   布尔](#boolean---)
+    * [string 字符串](#string-)
+    * [list 列表](#list-)
+    * [tuple 元组](#tuple-)
+    * [dict 字典](#dict-)
 <!-- TOC -->
 
-
 # 使用pip管理Python包
+
 ``pip install <包名>`` 安装指定的包
 
 `` pip uninstall <包名>`` 别除指定的包
@@ -14,7 +23,6 @@
 ``pip list`` 显示已经安装的包
 
 ``pip freeze`` 显示已经安装的包，并且以指定的格式显示
-
 
 # 修改pip下载源
 
@@ -39,4 +47,32 @@
 | 豆瓣(douban) | https://pypi.doubanio.com/simple/            |
 | 清华大学       | https://pypi.tuna.tsinghua.edu.cn/simple/    |
 | 中国科学技术大学   | https://mirrors.bfsu.edu.cn/pypi/web/simple/ |
+
+# 变量
+
+变量的格式： 变量名字 = 变量的值
+
+## 数据类型
+
+### Number 数值
+
+    int float
+
+### boolean   布尔
+
+### string 字符串
+
+""
+
+### list 列表
+
+[,,,]
+
+### tuple 元组
+
+(,,,)
+
+### dict 字典
+
+类似于json对象 {"name": "红浪漫", "age": 18}
 
