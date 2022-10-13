@@ -59,20 +59,20 @@
     int float
 
 ### boolean   布尔
-
+    True,False
 ### string 字符串
 
-""
+    ""
 
 ### list 列表
 
-[,,,]
+    [,,,]
 
 ### tuple 元组
 
-(,,,)
+    (,,,)
 
 ### dict 字典
 
-类似于json对象 {"name": "红浪漫", "age": 18}
+    类似于json对象 {"name": "红浪漫", "age": 18}
 
