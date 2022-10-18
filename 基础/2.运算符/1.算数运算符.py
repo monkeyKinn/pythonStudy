@@ -1,7 +1,7 @@
 # _*_ coding : utf-8 _*_
 # @Time : 2022/10/17 23:09
 # @Author : 金圣聪
-# @File : 运算符
+# @File : 2.运算符
 # @Project : pythonStudy
 
 a = 3
