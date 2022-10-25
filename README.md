@@ -19,7 +19,8 @@
 # pythonStudy
 
 # 学习爬虫 加油
-
+  ## 2022.10.13开始 
+  跟着b站[尚硅谷爬虫视频](https://www.bilibili.com/video/BV1Db4y1m7Ho?p=1&vd_source=432ae5430f4b5174f9f12fc5526ad9e3)学习
 # 打卡表
 
 | 日期         | 内容                                        | 完成情况 |
