@@ -5,8 +5,11 @@
 
 
 def print_hi(name):
-    a,b = 10,11.1
+    a, b = 10, 11.1
+    # 在下面的代码行中使用断点来调试脚本。
+    print(f'Hi, {name}')  # 按 Ctrl+F8 切换断点。
     print(f'a={a},b={b}')
+
 
 # 按间距中的绿色按钮以运行脚本。
 if __name__ == '__main__':
