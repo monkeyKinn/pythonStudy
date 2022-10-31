@@ -18,7 +18,6 @@ headers = {
     # # 不能有
     # # 'Accept-Encoding': 'gzip, deflate, br',
     # 'Accept-Language': 'zh-CN,zh;q=0.9',
-    # 'Acs-Token': '1667199837498_1667232271123_UNE9tDg+8urThUE6Uf0M+E89AFMvu7JHbaxaDxfSaipFF+7GhvBHb/EFoSxWVICAerY8jGNKz7gCOKe5/pTMirSb1Bo5aV/bZA4uBpl8b7EHd2LWVxfEX7GtlIFVBuls1fZFUZ7MQC9yyvc5Lix4jUTozuMQfh5S6YIQuaIQOJ2gN8vbtT9izFrhnp4/jVkYQ3ncjd6KkOUtmySM35i0y5M3aa3xj4fJdaAAKXJzEv5VQNALt7Vzh2o2AZwKIkK88+WAAdizc754p19r1uMCI3RxJVCdx1XyzIpprPkS0hCFtRCNaK2FdYqooFnM0BH8',
     # 'Connection': 'keep-alive',
     # 'Content-Length': '167',
     # 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -58,7 +57,7 @@ load_data = {
     'transtype': 'realtime',
     'simple_means_flag': '3',
     'sign': sign,
-    'token': '5b4d3d0776f177cefb30c38f6aa8b597',
+    'token': '你的token',
     'domain': 'common'
 }
 # data编码
@@ -77,7 +76,7 @@ print('-----\n')
 
 
 try:
-    # 因为没有cookie/sing解密可能会失败
+    # 因为没有cookie/sing/cookie和token对应不上  解密可能会失败
     print(json_content.get('trans_result').get('data')[0].get('dst'))
 except Exception as e:
     print(f'解析失败{e}\n')
