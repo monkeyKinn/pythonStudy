@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 374
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 31,
+      "storeName": "杭州星光",
+      "addressDetail": "江南大道228号星光大道商业街一楼",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 32,
+      "storeName": "古墩路印象城肯德基",
+      "addressDetail": "古墩路588号印象城二楼",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 33,
+      "storeName": "建德大润发",
+      "addressDetail": "严州大道新安江街道毕家后",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 34,
+      "storeName": "杭州湖滨",
+      "addressDetail": "东坡路8号（知味观边上）",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 35,
+      "storeName": "丁桥物美",
+      "addressDetail": "丁桥镇紫丁香街新城广场一楼肯德基",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 36,
+      "storeName": "西溪印象城SEL",
+      "addressDetail": "五常大道和天目山路交叉口，西溪印象城",
+      "pro": "精选店,精选店,礼品卡,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 37,
+      "storeName": "杭州新解百",
+      "addressDetail": "解放路249号（国货路和浣纱路交叉口）",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 38,
+      "storeName": "万象城KPRO",
+      "addressDetail": "富春路701号华润万象城地下1层B163",
+      "pro": "Wi-Fi,Wi-Fi,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 39,
+      "storeName": "富阳玉长城",
+      "addressDetail": "春秋北路271号玉长城商业广场",
+      "pro": "店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 40,
+      "storeName": "杭州信义坊",
+      "addressDetail": "湖墅南路488号TEL：88062769",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    }
+  ]
+}

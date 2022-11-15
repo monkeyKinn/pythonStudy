@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 374
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 21,
+      "storeName": "杭州北山",
+      "addressDetail": "西湖区北山路85-87号",
+      "pro": "Wi-Fi,Wi-Fi,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 22,
+      "storeName": "瓜沥航民",
+      "addressDetail": "萧山区瓜沥镇东灵路34－36号",
+      "pro": "24小时,24小时,Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 23,
+      "storeName": "杭州钛合",
+      "addressDetail": "朝晖路168-4，钛合广场一楼",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡,手机点餐,手机点餐",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 24,
+      "storeName": "杭州福雷德",
+      "addressDetail": "经济技术开发区学林街99号福雷德广场",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 25,
+      "storeName": "杭州转塘世纪联华餐厅",
+      "addressDetail": "西湖区转塘镇转塘江口大厦一楼",
+      "pro": "24小时,24小时,Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 26,
+      "storeName": "半山中联",
+      "addressDetail": "半山路中联百货一楼 Tel88176495",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 27,
+      "storeName": "余杭禹航",
+      "addressDetail": "余杭镇禹航路908号",
+      "pro": "24小时,24小时,Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 28,
+      "storeName": "庆春银泰",
+      "addressDetail": "庆春银泰百货一楼T:86533298",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 29,
+      "storeName": "留下西溪",
+      "addressDetail": "留下大街107号",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 30,
+      "storeName": "桐庐大润发",
+      "addressDetail": "桐君街道金堂山路128号大润发超一搂",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    }
+  ]
+}

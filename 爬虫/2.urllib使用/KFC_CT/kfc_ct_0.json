@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 374
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 1,
+      "storeName": "杭州庆丰",
+      "addressDetail": "教工路23号",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 2,
+      "storeName": "富阳大润发",
+      "addressDetail": "孙权路209号",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 3,
+      "storeName": "杭州复兴",
+      "addressDetail": "复兴路103号TEL:86732723",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 4,
+      "storeName": "余杭交通大厦",
+      "addressDetail": "余杭邱山大街477号",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 5,
+      "storeName": "杭州运河广场",
+      "addressDetail": "金华路与衢州街交叉口运河广场地下一层(区政府对面)TEL：88162340",
+      "pro": "Wi-Fi,Wi-Fi,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 6,
+      "storeName": "萧山泰富早餐06：30供应",
+      "addressDetail": "泰富广场一楼 TEL：82700177",
+      "pro": "礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 7,
+      "storeName": "杭州浦沿 ",
+      "addressDetail": "浦沿镇浦沿路和滨文路交叉路口",
+      "pro": "点唱机,点唱机,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 8,
+      "storeName": "香积寺路肯德基",
+      "addressDetail": "香积寺路17号TEL:85886212",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 9,
+      "storeName": "杭州红石",
+      "addressDetail": "湖墅南路216-218号",
+      "pro": "店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 10,
+      "storeName": "新塘乐购",
+      "addressDetail": "新塘路29-31号",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    }
+  ]
+}

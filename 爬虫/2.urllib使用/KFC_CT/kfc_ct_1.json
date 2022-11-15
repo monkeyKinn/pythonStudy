@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 374
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 11,
+      "storeName": "杭州阳光",
+      "addressDetail": "下沙区4号大街15-2新美商场一楼",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 12,
+      "storeName": "萧山机场",
+      "addressDetail": "萧山国际机场侯机楼一楼到达厅内",
+      "pro": "礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 13,
+      "storeName": "余杭莱蒙",
+      "addressDetail": "临平藕花洲大街303号莱蒙商业中心",
+      "pro": "店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 14,
+      "storeName": "杭州文三",
+      "addressDetail": "文三路478号华星时代广场C座一层",
+      "pro": null,
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 15,
+      "storeName": "杭州万象",
+      "addressDetail": "体育场路430号",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 16,
+      "storeName": "杭州九堡",
+      "addressDetail": "杭海路878路金海商城一层",
+      "pro": "礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 17,
+      "storeName": "萧山香江",
+      "addressDetail": "萧山萧绍路1314号香江大厦1—2楼",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 18,
+      "storeName": "杭州秋涛",
+      "addressDetail": "秋涛北路248华润Tel87114750",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡,手机点餐,手机点餐",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 19,
+      "storeName": "富阳龙山",
+      "addressDetail": "龙山路126号",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 20,
+      "storeName": "萧山拱秀",
+      "addressDetail": "城厢镇拱秀路169号",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    }
+  ]
+}

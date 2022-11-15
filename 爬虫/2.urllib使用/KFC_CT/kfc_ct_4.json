@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 374
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 41,
+      "storeName": "杭州北站",
+      "addressDetail": "汽车北站对面（月星家居一楼）",
+      "pro": "点唱机,点唱机,礼品卡,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 42,
+      "storeName": "新塘世纪联华",
+      "addressDetail": "景芳路与新塘路交汇处西南角新城时代广场一层",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 43,
+      "storeName": "颐高餐厅（早餐6:00起）",
+      "addressDetail": "文三路353号肯德基（九莲新村对面）",
+      "pro": "点唱机,点唱机,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 44,
+      "storeName": "新登新兴",
+      "addressDetail": "富阳区新登镇新兴路51号",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 45,
+      "storeName": "临安万华",
+      "addressDetail": "锦城街道钱王大街855号",
+      "pro": "Wi-Fi,Wi-Fi,点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 46,
+      "storeName": "萧山恒隆",
+      "addressDetail": "恒隆B座写字楼旁TEL82391955",
+      "pro": "Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 47,
+      "storeName": "杭州灵隐",
+      "addressDetail": "灵隐路38号",
+      "pro": "Wi-Fi,Wi-Fi,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 48,
+      "storeName": "杭州莲花",
+      "addressDetail": "莲花街333号莲花广场一楼",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 49,
+      "storeName": "塘栖广济",
+      "addressDetail": "塘栖镇西石塘街45-50号",
+      "pro": "点唱机,点唱机,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    },
+    {
+      "rownum": 50,
+      "storeName": "临浦峙山",
+      "addressDetail": "临浦镇峙山北路113号-115号",
+      "pro": "24小时,24小时,Wi-Fi,Wi-Fi,店内参观,店内参观,礼品卡",
+      "provinceName": "浙江省",
+      "cityName": "杭州市"
+    }
+  ]
+}
