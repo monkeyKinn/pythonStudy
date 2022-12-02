@@ -14,7 +14,7 @@ import urllib.parse
 url = 'https://movie.douban.com/j/chart/top_list?type=5&interval_id=100%3A90&action=&start=0&limit=20'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:104.0) Gecko/20100101 Firefox/104.0',
-    # 一定要cookie 否则百度安全验证 (截止2022年11月1日 01:48:35 暂时不验证cookie有效性(可以过期))
+    # 一定要cookie
     'cookie': ''
 }
 # 1.请求对象的定制

@@ -23,7 +23,7 @@ data = {
 # post请求的参数必须编码
 load = urllib.parse.urlencode(data).encode('utf-8')
 
-# post的请求的参数是不会拼接在Ur1的后面的，而是需要放在请求对象定制的参数中
+# post的请求的参数是不会拼接在Url的后面的，而是需要放在请求对象定制的参数中
 req = urllib.request.Request(url=url, data=load, headers=headers)
 resp = urllib.request.urlopen(req)
 
@@ -46,6 +46,9 @@ for data in respDatas:
     # spidery adj.像蜘蛛腿一般细长的; 象蜘蛛网的，十分精致的
     print(data.get('k') + '\t' + data.get('v') + '\n')
 # print(jsContent.get('data'))
+
+
+
 # ******注意:
 #           post请求参数必须编码      在url编码之后再进行编码
 #               load = urllib.parse.urlencode(data).encode('utf-8')
