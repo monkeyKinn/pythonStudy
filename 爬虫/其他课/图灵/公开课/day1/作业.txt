@@ -1,0 +1,14 @@
+1. 头部参数加密模拟生成:
+    http://webapi.cninfo.com.cn/#/marketDataDate  mcode加密
+    交给何老师企业微信
+
+
+工具地址:
+    https://coding.tools/cn/sha256
+
+
+
+课上案例地址:
+    https://ygp.gdzwfw.gov.cn/#/44/jygg
+    https://curlconverter.com/
+    https://www.sojson.com/aaencode.html
