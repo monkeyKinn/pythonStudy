@@ -18,6 +18,7 @@ def filter_data(data):
     for item in data:
         for sub_item in item['list']:
             yield {
+                'className': sub_item['className'],
                 'title': sub_item['title'],
                 'url': sub_item['url'],
                 'time': datetime.fromtimestamp(sub_item['time'] / 1000).strftime('%Y-%m-%d %H:%M:%S')
