@@ -25,6 +25,7 @@ def filter_notices_18(data):
     for item in data:
         for sub_item in item['list']:
             yield {
+                'className': sub_item['className'],
                 'title': sub_item['title'],
                 'url': sub_item['url'],
                 'time': datetime.fromtimestamp(sub_item['time'] / 1000).strftime('%Y-%m-%d %H:%M:%S')
@@ -102,7 +103,9 @@ def get_msg(values):
 def build_msg_18(value):
     title = value['title']
     url = value['url']
+    class_name = value['className']
     msg = '【18】\n' \
+          '类型: ' + class_name + '\n' \
           '公告: ' + title + '\n' \
           '链接: ' + url + '\n' \
           '图灵 | 数藏公告Q裙(PS: 更多功能开发ing...): 340129397'
