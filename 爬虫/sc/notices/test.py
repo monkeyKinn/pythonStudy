@@ -1,37 +1,48 @@
-# _*_ coding : utf-8 _*_
-# @Time : 2023/4/28 1:22
-# @Author : 金圣聪
-# @File : test.py
-# @Project : pythonStudy
-# 定义18的公告url
+import threading
 import time
+import requests
 
-notice_url_18 = 'https://info.18art.art/html/infor/infor.html?sub=0&v=1682010188874'
-a = {'https://info.18art.art/html/infor/infor.html?sub=0&v=1682010188874': {
-    'title': '【十八数藏寄售公告】藏品《满窗清景》开放寄售',
-    'url': 'https://info.18art.art/html/infor/detail/infor_detail_260bf62de2d54882ac9d148e444958f4.html?v=1682609703623',
-    'time': '2023-04-27 23:35:04'}}
 
-for (key, value) in a.items():
-    # print(key, value)
-    # print()
-    if key == notice_url_18:
-        # print(value)
-        # 组装msg
-        title = value['title']
-        url = value['url']
-        msg = '【18】\n' \
-              '公告: ' + title + '\n' \
-                                 '链接: ' + url
-        print(msg)
+class WebsiteChecker:
+    def __init__(self, url, value_func):
+        self.url = url
+        self.value_func = value_func
+        self.last_value = None
+        self.lock = threading.Lock()
 
-urls = [notice_url_18,
-        # XXX
-        ]
-print(len(urls))
-for url in urls:
-    print(url)
-url = '123' + '时间'
-print(url)
+    def run(self):
+        while True:
+            value = self.value_func(self.url)
+            with self.lock:
+                if self.last_value is not None and self.last_value != value:
+                    self.handle_change(value)
+                self.last_value = value
+            time.sleep(0.5)
 
-print(int(round(time.time() * 1000)))
+    def handle_change(self, value):
+        print(f"Value changed to {value} for {self.url}")
+
+
+def get_value_from_url(url):
+    response = requests.get(url)
+    # 这里假设我们从响应中获取到了值
+    value = response.text
+    return value
+
+
+def main():
+    urls = ["http://example.com", "http://example.org", "http://example.net"]
+    checkers = []
+    for url in urls:
+        checker = WebsiteChecker(url, get_value_from_url)
+        checkers.append(checker)
+        thread = threading.Thread(target=checker.run)
+        thread.daemon = True
+        thread.start()
+    # 主线程等待所有检查器线程结束
+    for checker in checkers:
+        thread.join()
+
+
+if __name__ == '__main__':
+    main()

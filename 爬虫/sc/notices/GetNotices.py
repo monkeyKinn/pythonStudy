@@ -11,6 +11,7 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup
 import threading
+from collections import defaultdict
 import time
 import json
 
@@ -66,7 +67,7 @@ def get_value_from_url(url):
 
 
 # 定义一个字典类型的变量，保存每个URL对应的上一个值
-last_values = {}
+last_values = defaultdict(threading.Lock)
 
 
 # 定义每个线程需要执行的方法
