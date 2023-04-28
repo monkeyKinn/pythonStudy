@@ -20,7 +20,7 @@ QMSG_KEY = 'ad4f0b3cfa3f54d577fb171b49df6719'
 notice_url_18 = 'https://info.18art.art/html/infor/infor.html?sub=0&v=1682010188874'
 
 
-# 过滤18的公告,只需要 title|url|time
+# 过滤18的公告,只需要 className|title|url|time
 def filter_notices_18(data):
     for item in data:
         for sub_item in item['list']:
