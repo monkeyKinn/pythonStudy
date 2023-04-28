@@ -118,7 +118,7 @@ def build_msg_18(value):
 def send_by_qmsg(msg):
     print('发送机器人请求')
     # 发送post请求
-    qmsg_group_url = 'https://qmsg.zendee.cn:443/send/' + QMSG_KEY
+    qmsg_group_url = 'https://qmsg.zendee.cn:443/group/' + QMSG_KEY
 
     data = {
         'msg': msg,
