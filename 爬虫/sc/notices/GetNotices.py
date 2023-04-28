@@ -1,3 +1,10 @@
+# _*_ coding : utf-8 _*_
+# 18获取公告
+# @Time : 2023/4/20 22:59
+# @Author : 金圣聪
+# @File : GetAnnouncement_18.py
+# @Project : pythonStudy
+
 import time
 import threading
 from typing import Callable
