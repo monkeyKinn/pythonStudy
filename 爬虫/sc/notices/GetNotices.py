@@ -17,7 +17,7 @@ import json
 # 定义Qmsg的key
 QMSG_KEY = 'ad4f0b3cfa3f54d577fb171b49df6719'
 # 定义18的公告url
-notice_url_18 = 'https://info.18art.art/html/infor/infor.html?sub=0&v=1682010188874'
+notice_url_18 = 'https://info.18art.art/html/infor/infor.html?sub=0&v='
 
 
 # 过滤18的公告,只需要 className|title|url|time
@@ -35,7 +35,8 @@ def filter_notices_18(data):
 # 获取18最新的公告,返回格式是: {"title": "","url": "","time": ""}
 def get_notice_from_18(notice_url):
     # 2.模拟浏览器向服务器请求
-    response = urllib.request.urlopen(notice_url)
+    url = notice_url + str(int(round(time.time() * 1000)))
+    response = urllib.request.urlopen(url)
     # 3.获取响应中页面的源码
     # read方法返回的是字节形式的二进制数据
     #   所以需要  decode('编码的格式')解码
