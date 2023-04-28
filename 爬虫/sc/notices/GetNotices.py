@@ -156,3 +156,9 @@ def send_notices():
 if __name__ == '__main__':
     # 执行多线程方法
     send_notices()
+    # main thread waits for keyboard interrupt
+    try:
+        while True:
+            time.sleep(0.8)
+    except KeyboardInterrupt:
+        pass
