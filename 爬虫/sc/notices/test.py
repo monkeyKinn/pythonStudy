@@ -143,6 +143,6 @@ if __name__ == "__main__":
     # main thread waits for keyboard interrupt
     try:
         while True:
-            time.sleep(0.5)
+            time.sleep(0.8)
     except KeyboardInterrupt:
         pass
