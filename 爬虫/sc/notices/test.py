@@ -2,6 +2,7 @@ import time
 import threading
 from typing import Callable
 
+
 class WebsiteChecker:
     def __init__(self, url: str, get_value: Callable[[], str]):
         self.url = url
@@ -21,9 +22,11 @@ class WebsiteChecker:
                     print(f"Value for {self.url} is unchanged")
             time.sleep(0.5)
 
+
 def get_value_from_url(url: str) -> str:
     # replace this function with your code for getting the value from the URL
     return "Some value from " + url
+
 
 if __name__ == "__main__":
     urls = ["http://example.com", "http://google.com", "http://reddit.com"]
