@@ -55,8 +55,8 @@ def get_notice_from_18(notice_url):
 def get_value_from_url(url):
     # 判断字符川里是否包含指定字符
     if "18art.art" in url:
-        print("是18的告")
-        print("开始获取并设置值.....")
+        # print("是18的告")
+        # print("开始获取并设置值.....")
         return get_notice_from_18(url)
     elif "42" in url:
         print("是42的告")
@@ -72,28 +72,28 @@ last_values = {}
 def check_value(url):
     while True:
         value = get_value_from_url(url)
-        print(f"此次获取到的值是:{value}")
+        # print(f"此次获取到的值是:{value}")
         last_value = last_values.get(url)
-        print(f"最新的值是:{last_value}")
+        # print(f"最新的值是:{last_value}")
         if value != last_value:
             # 如果当前值与上一个值不相等，进行进一步的逻辑处理
-            print(f"从 {url} 获取到的值已经从 {last_value} 变成了 {value}")
+            # print(f"从 {url} 获取到的值已经从 {last_value} 变成了 {value}")
             last_values[url] = value
-            print(f'最新的值是{last_value[url]}')
+            # print(f'最新的值是{last_value[url]}')
             # 发送机器人请求
             msg = get_msg(last_values)
             send_by_qmsg(msg)
 
         else:
-            # 如果相等，则休眠30秒
+            # 如果相等，则休眠0.5秒
             print(f"{datetime.now()} | 从 {url} 获取到的值:{value},和上次的值:{last_value}的一样. 睡30s")
-            time.sleep(30)
+            time.sleep(0.5)
 
 
 def get_msg(values):
     # 3.遍历字典的key-value
     for (key, value) in values.items():
-        print(key, value)
+        # print(key, value)
         # 是18的url
         if key == notice_url_18:
             return build_msg_18(value)
@@ -114,7 +114,7 @@ def build_msg_18(value):
 
 # 发送机器人请求
 def send_by_qmsg(msg):
-    print('发送机器人请求')
+    # print('发送机器人请求')
     # 发送post请求
     qmsg_group_url = 'https://qmsg.zendee.cn:443/send/' + QMSG_KEY
 
@@ -144,7 +144,7 @@ def send_notices():
 
     for url in urls:
         last_values[url] = get_value_from_url(url)
-        print(f'设置值成功,此时,{last_values[url]}')
+        # print(f'设置值成功,此时,{last_values[url]}')
 
         thread = threading.Thread(target=check_value, args=(url,))
         thread.start()
