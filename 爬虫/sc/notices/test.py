@@ -1,48 +1,42 @@
-import threading
 import time
-import requests
-
+import threading
+from typing import Callable
 
 class WebsiteChecker:
-    def __init__(self, url, value_func):
+    def __init__(self, url: str, get_value: Callable[[], str]):
         self.url = url
-        self.value_func = value_func
-        self.last_value = None
+        self.get_value = get_value
+        self.value = None
         self.lock = threading.Lock()
 
     def run(self):
         while True:
-            value = self.value_func(self.url)
+            current_value = self.get_value()
             with self.lock:
-                if self.last_value is not None and self.last_value != value:
-                    self.handle_change(value)
-                self.last_value = value
+                if current_value != self.value:
+                    print(f"New value for {self.url}: {current_value}")
+                    self.value = current_value
+                    # do additional logic here
+                else:
+                    print(f"Value for {self.url} is unchanged")
             time.sleep(0.5)
 
-    def handle_change(self, value):
-        print(f"Value changed to {value} for {self.url}")
+def get_value_from_url(url: str) -> str:
+    # replace this function with your code for getting the value from the URL
+    return "Some value from " + url
 
-
-def get_value_from_url(url):
-    response = requests.get(url)
-    # 这里假设我们从响应中获取到了值
-    value = response.text
-    return value
-
-
-def main():
-    urls = ["http://example.com", "http://example.org", "http://example.net"]
+if __name__ == "__main__":
+    urls = ["http://example.com", "http://google.com", "http://reddit.com"]
     checkers = []
+
     for url in urls:
-        checker = WebsiteChecker(url, get_value_from_url)
+        checker = WebsiteChecker(url, lambda: get_value_from_url(url))
         checkers.append(checker)
-        thread = threading.Thread(target=checker.run)
-        thread.daemon = True
-        thread.start()
-    # 主线程等待所有检查器线程结束
-    for checker in checkers:
-        thread.join()
+        threading.Thread(target=checker.run, daemon=True).start()
 
-
-if __name__ == '__main__':
-    main()
+    # main thread waits for keyboard interrupt
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        pass
