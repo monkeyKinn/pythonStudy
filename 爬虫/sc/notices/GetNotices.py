@@ -86,7 +86,8 @@ def check_value(url):
 
         else:
             # 如果相等，则休眠0.5秒
-            print(f"{datetime.now()} | 从 {url} 获取到的值:{value},和上次的值:{last_value}的一样. 睡30s")
+            # print(f"{datetime.now()} | 从 {url} 获取到的值:{value},和上次的值:{last_value}的一样. 睡30s")
+            print(f"{datetime.now()} | 从 {url} 获取到的一样. 睡0.5s")
             time.sleep(0.5)
 
 
