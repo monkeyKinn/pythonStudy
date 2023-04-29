@@ -11,6 +11,7 @@ import threading
 import time
 import urllib.parse
 import urllib.request
+import logging
 from datetime import datetime
 
 import requests
@@ -28,6 +29,7 @@ class WebsiteChecker:
         self.get_value = get_value
         self.value = None
         self.lock = threading.Lock()
+        self.name = url
 
     def run(self):
         while True:
@@ -37,12 +39,13 @@ class WebsiteChecker:
                     print(f"New value for {self.url}: {current_value}")
                     self.value = current_value
                     # do additional logic here
-                    print(f"Value for {self.url} is changed:")
+                    print(f"thread name: {self.name} | Value for {self.url} is changed:")
                     print(f"Value is {self.value}")
                     msg = get_msg(self.value)
-                    send_by_qmsg(msg)
+                    # send_by_qmsg(msg)
+                    print(f'msg为: {msg}')
                 else:
-                    print(f"{datetime.now()} | Value for {self.url} is unchanged")
+                    print(f"{datetime.now()} | thread name: {self.name} | Value for {self.url} is unchanged")
             time.sleep(0.5)
 
 
