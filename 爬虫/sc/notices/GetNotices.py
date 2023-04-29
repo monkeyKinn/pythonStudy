@@ -139,6 +139,7 @@ def get_notice_from_18(notice_url):
     }
 
     response = requests.get(url, cookies=cookies, headers=headers)
+    response.encoding = "UTF-8"
     soup = BeautifulSoup(response.text, 'html.parser')
     inject_json_str = soup.findAll('script')[2].text.split(';')[1].strip().replace('window.__injectJson=', '')
     inject_json = ast.literal_eval(inject_json_str)

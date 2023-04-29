@@ -25,6 +25,7 @@ headers = {
 }
 
 response = requests.get('https://info.18art.art/html/infor/infor.html', cookies=cookies, headers=headers)
+response.encoding = "UTF-8"
 soup = BeautifulSoup(response.text, 'html.parser')
 inject_json_str = soup.findAll('script')[2].text.split(';')[1].strip().replace('window.__injectJson=', '')
 inject_json = ast.literal_eval(inject_json_str)
