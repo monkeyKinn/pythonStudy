@@ -5,19 +5,16 @@
 # @File : GetAnnouncement_18.py
 # @Project : pythonStudy
 
-import time
-import threading
-from typing import Callable
 import ast
-import urllib.request
+import json
+import threading
+import time
 import urllib.parse
+import urllib.request
 from datetime import datetime
 
+import requests
 from bs4 import BeautifulSoup
-import threading
-from collections import defaultdict
-import time
-import json
 
 # 定义Qmsg的key
 QMSG_KEY = 'ad4f0b3cfa3f54d577fb171b49df6719'
@@ -107,14 +104,42 @@ def get_value_from_url(url):
 def get_notice_from_18(notice_url):
     # 2.模拟浏览器向服务器请求
     url = notice_url + str(int(round(time.time() * 1000)))
-    response = urllib.request.urlopen(url)
-    # 3.获取响应中页面的源码
-    # read方法返回的是字节形式的二进制数据
-    #   所以需要  decode('编码的格式')解码
-    content = response.read().decode('UTF-8')
-    # 4.打印数据
-    # print(content)
-    soup = BeautifulSoup(content, 'html.parser')
+    # response = urllib.request.urlopen(url)
+    # # 3.获取响应中页面的源码
+    # # read方法返回的是字节形式的二进制数据
+    # #   所以需要  decode('编码的格式')解码
+    # content = response.read().decode('UTF-8')
+    # # 4.打印数据
+    # # print(content)
+    # soup = BeautifulSoup(content, 'html.parser')
+    # inject_json_str = soup.findAll('script')[2].text.split(';')[1].strip().replace('window.__injectJson=', '')
+    # inject_json = ast.literal_eval(inject_json_str)
+    # # 通知列表
+    # notices_list = inject_json['noticeList']
+
+    cookies = {
+        'USER-TOKEN': 'd8OLe1gxt40bQ9oVtgLOCoormmr0nrsGftpadgVSqK0=',
+    }
+
+    headers = {
+        'authority': 'info.18art.art',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        'if-modified-since': 'Fri, 28 Apr 2023 06:53:29 GMT',
+        'if-none-match': '"9F226414FEF9D5962040E14D7E26C970"',
+        'sec-ch-ua': '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'none',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    }
+
+    response = requests.get(url, cookies=cookies, headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
     inject_json_str = soup.findAll('script')[2].text.split(';')[1].strip().replace('window.__injectJson=', '')
     inject_json = ast.literal_eval(inject_json_str)
     # 通知列表
