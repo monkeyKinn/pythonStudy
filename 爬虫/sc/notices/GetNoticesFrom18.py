@@ -109,7 +109,7 @@ def build_msg_18(value):
 
 
 if __name__ == '__main__':
-    current_value = None  # 初始化当前值为 None
+    current_value = get_notice_from_18(notice_url_18)  # 初始化当前值为 None
     while True:
         # print(datetime.now())
         new_value = get_notice_from_18(notice_url_18)
@@ -121,5 +121,5 @@ if __name__ == '__main__':
             print(msg)
         else:
             print(f"{datetime.now()} | Value for 18 is unchanged:{current_value}")
-            time.sleep(0.5)
+            time.sleep(1)
 
