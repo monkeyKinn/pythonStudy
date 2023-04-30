@@ -40,8 +40,8 @@ class WebsiteChecker:
                     print(f"thread name: {self.name} | Value for {self.url} is changed:")
                     print(f"Value is {self.value}")
                     msg = get_msg(self.value)
-                    # send_by_qmsg(msg)
-                    print(msg)
+                    send_by_qmsg(msg)
+                    # print(msg)
                 else:
                     print(f"{datetime.now()} | thread name: {self.name} | Value for {self.url} is unchanged")
             time.sleep(0.5)
