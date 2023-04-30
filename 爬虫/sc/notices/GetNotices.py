@@ -23,16 +23,15 @@ notice_url_18 = 'https://info.18art.art/html/infor/infor.html?sub=0&v='
 
 
 class WebsiteChecker:
-    def __init__(self, url, get_value):
+    def __init__(self, url):
         self.url = url
-        self.get_value = get_value
         self.value = None
         self.lock = threading.Lock()
         self.name = url
 
     def run(self):
         while True:
-            current_value = self.get_value()
+            current_value = get_value_from_url(self.url)
             with self.lock:
                 if current_value != self.value:
                     print(f"New value for {self.url}: {current_value}")
@@ -41,7 +40,8 @@ class WebsiteChecker:
                     print(f"thread name: {self.name} | Value for {self.url} is changed:")
                     print(f"Value is {self.value}")
                     msg = get_msg(self.value)
-                    send_by_qmsg(msg)
+                    # send_by_qmsg(msg)
+                    print(msg)
                 else:
                     print(f"{datetime.now()} | thread name: {self.name} | Value for {self.url} is unchanged")
             time.sleep(0.5)
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     checkers = []
 
     for url in urls:
-        checker = WebsiteChecker(url, lambda: get_value_from_url(url))
+        checker = WebsiteChecker(url)
         checkers.append(checker)
         threading.Thread(target=checker.run, daemon=True).start()
 
