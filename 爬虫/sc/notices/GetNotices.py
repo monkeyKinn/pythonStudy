@@ -168,8 +168,5 @@ if __name__ == "__main__":
         threading.Thread(target=checker.run, daemon=True).start()
 
     # main thread waits for keyboard interrupt
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        pass
+    event = threading.Event()
+    event.wait()
