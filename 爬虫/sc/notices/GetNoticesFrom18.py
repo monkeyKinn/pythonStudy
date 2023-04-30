@@ -109,16 +109,17 @@ def build_msg_18(value):
 
 
 if __name__ == '__main__':
+    current_value = None  # 初始化当前值为 None
     while True:
         # print(datetime.now())
-        current_value = get_notice_from_18(notice_url_18)
-        if current_value != get_notice_from_18(notice_url_18):
-            current_value = get_notice_from_18(notice_url_18)
+        new_value = get_notice_from_18(notice_url_18)
+        if current_value != new_value:
+            current_value = new_value
             print(f"New value for 18: {current_value}")
             msg = build_msg_18(current_value)
             # send_by_qmsg(msg)
             print(msg)
         else:
             print(f"{datetime.now()} | Value for 18 is unchanged:{current_value}")
-            # time.sleep(0.5)
+            time.sleep(0.5)
 
