@@ -117,8 +117,7 @@ if __name__ == '__main__':
             current_value = new_value
             print(f"New value for 18: {current_value}")
             msg = build_msg_18(current_value)
-            # send_by_qmsg(msg)
-            print(msg)
+            send_by_qmsg(msg)
         else:
             print(f"{datetime.now()} | Value for 18 is unchanged:{current_value}")
             time.sleep(1)
