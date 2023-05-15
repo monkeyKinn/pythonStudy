@@ -15,7 +15,7 @@
 # fp.close()
 
 # 读数据
-fp = open('txt.txt','r')
+fp = open('txt.txt', 'r')
 # 默认情况下,read是一个字节一个字节读
 # content = fp.read()
 # print(content)

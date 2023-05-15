@@ -29,7 +29,7 @@ json_data = {
     'openConvert': False,
 }
 
-ctx_headers = execjs.compile(open('./demo1.js', 'r', encoding='utf-8').read()).call('main123', json_data)
+ctx_headers = execjs.compile(open('demo1.js', 'r', encoding='utf-8').read()).call('main123', json_data)
 print(ctx_headers)
 
 # 浏览器模拟

@@ -33,7 +33,7 @@ headers = {
 # 添加字典,
 # todo 从js中解密获取
 # headers['mcode'] = 'MTY4MTIyODkwMQ=='
-mcode = execjs.compile(open('./1.js', 'r', encoding='utf-8').read()).call('getMcode')
+mcode = execjs.compile(open('1.js', 'r', encoding='utf-8').read()).call('getMcode')
 headers['mcode'] = mcode
 
 print(f'mcode: {mcode}')
