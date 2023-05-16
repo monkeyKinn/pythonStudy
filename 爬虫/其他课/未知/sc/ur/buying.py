@@ -38,6 +38,7 @@ json_data = {
 }
 
 while True:
+    response = ''
     try:
         time.sleep(0.001)
         response = requests.post(
@@ -74,11 +75,13 @@ while True:
                     except Exception as e:
                         print(e)
                         print(f'小错误:{e}')
+                        print(response.text)
                 print(f'没有未锁定的,id为{it_id}')
         else:
             print('已退市')
     except Exception as e:
         print(f'大错误:{e}')
+        print(response.text)
 # Note: json_data will not be serialized by requests
 # exactly as it was in the original request.
 # data = '{"goods_id":"14","sort_type":2,"page_size":15,"page":1}'
