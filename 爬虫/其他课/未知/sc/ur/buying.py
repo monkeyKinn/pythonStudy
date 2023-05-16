@@ -11,9 +11,9 @@ cookies = {
     'cdn_sec_tc': '7ae4079c16842518773358230e7eceeb35528daab734810cfa88871dc1',
     'PHPSESSID': 'k6kqn4kp3gj93tg3fosbdk4cth',
     'acw_sc__v2': '6463ac0a337330a7954a199374532ecdcda07c53',
-    'arp_scroll_position': '82',
-    'ssxmod_itna': 'QqGxBDRDcDy7D=Ye0L5YIEP7qCO=KCe7F58ODlOEQxA5D8D6DQeGTT2NKeTYed57GbxhxTK0ix3=8e+WoThei2w4GLDmKDyKiOueDxaq0rD74irDDxD3cD7PGmDieC0D7oZMgcTNKiOD7eDXxGCDQIsExGWDiPD7pFxMmKw7pIC7rAsK4D1qYvPFmKD9x0CDlp4vbi8DD5ffbDzRZOADm43woAGDCKDjpYC8OYDU0IznxI6ZlD3Yl0eaOinW1eDg7htQY4KYGeqFHnPzarKrqiTpibyYYD==',
-    'ssxmod_itna2': 'QqGxBDRDcDy7D=Ye0L5YIEP7qCO=KCe7F58Dnxn9G9AKDsYqYDLAQiwiliDmwcGHD8246bK6QjAPKnGrYH=KXGFGIxfnKAGFXjqQik86xZSKTLK2AH7m0L+Y4Nt5nEdsCzOrXi=sHjcjMfjRqdAQld4rlQAm3L8Sd5x=f23v4f+tjR=cQLBzBuU0mTpn+bCl+YvYCc032WdfxKhfhEufcYCAc9Y545GFTYGh4La=Ta/AjoovuWIaCTCY1EyRnor=UACkBH8eb=7PShlfZ58Y5KUiAoj4ka7gb=j3V2lRq0x8+UdjeQVycHbPm05m0rviFjzn20pQ/9q8G=Sx4GwwIHPcRwjirS5F49qWwHtRqI9d8beYnod9dBRDRwHRuD34G8wHDIuRnDyqp4wm/qC7cIB+njWxOmm3OaFnEY3jW3Ef2IznceHC0KaO0oD07FGCx2rkiQb0=xothpxw=eiSjw6enm6brbYDUUoWIa=A=fipUZDKyajraUncDXPXw65376K9FeGDD7=DYIcmgPGqIABKA45jMKV8y9B=A+jGToteAoZFAb+6iN0nKXueE+xzuKNDaSxv5=x94qShDD==',
+    'arp_scroll_position': '44',
+    'ssxmod_itna': 'euD=qRODCG83G=DXtRxCaDRn8D7nKniim35DBkAr4iNDnD8x7YDvm+dFlmnDVFDBKWsDQwm+xkG44mhoH9CA5WlIDB3DEx06+8jQxiicDCeDIDWeDiDGb=DFxYoDePNQDFWqvU1cmxWKDKx0kDY5DwZv8DYPDWxDFfam5MAFwOE9COaBs54D1P=5xfxG1DQ5DscDfzAKD0pSfzmyChbDDEG4OqtYDvxDk3KyF54Gd66H1h1kNPG+KPYxN8jGnahm4SeeKzQiNoPe4zWnxsg=NvqiTlWZD4D=',
+    'ssxmod_itna2': 'euD=qRODCG83G=DXtRxCaDRn8D7nKniimiDAqA=ND/txKwohcq7PGOUcfh3ULphGcDCSBgLKGkbbq7mw9ec72iviGfW7WNoLEO2XxG3WaCyXVFnRIIq5TvexT+6o9M5mmDFqG7zeD===',
 }
 
 headers = {
@@ -52,7 +52,7 @@ while True:
             for good in goods:
                 it_id = good.get('id')
                 if good.get('goods_status') != 2:
-                    print('有可锁的')
+                    print(f'有可锁的,编号:{good.get("collection_number")}')
                     json_data_creat = {
                         'goods_id': 14,
                         'order_type': 3,
@@ -65,7 +65,7 @@ while True:
                         print(response.json())
                         flag = response.json().get('msg') == '点击的太快了呢,请您稍后重试!'
                         while flag:
-                            time.sleep(0.001)
+                            # time.sleep(0.001)
                             response = requests.post('https://ur.himayi.cn/h5/super/order/createOrder', cookies=cookies,
                                                      headers=headers,
                                                      json=json_data_creat)
@@ -77,6 +77,7 @@ while True:
                         print(f'小错误:{e}')
                         print(response.text)
                 print(f'没有未锁定的,id为{it_id}')
+                print(f'----------')
         else:
             print('已退市')
     except Exception as e:
