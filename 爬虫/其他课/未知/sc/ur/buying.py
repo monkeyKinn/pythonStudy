@@ -7,18 +7,19 @@
 import requests
 import time
 cookies = {
-    'acw_tc': '7ae4079c16842518773358230e7eceeb35528daab734810cfa88871dc1',
-    'cdn_sec_tc': '7ae4079c16842518773358230e7eceeb35528daab734810cfa88871dc1',
-    'PHPSESSID': 'k6kqn4kp3gj93tg3fosbdk4cth',
-    'acw_sc__v2': '6463ac0a337330a7954a199374532ecdcda07c53',
-    'arp_scroll_position': '44',
-    'ssxmod_itna': 'euD=qRODCG83G=DXtRxCaDRn8D7nKniim35DBkAr4iNDnD8x7YDvm+dFlmnDVFDBKWsDQwm+xkG44mhoH9CA5WlIDB3DEx06+8jQxiicDCeDIDWeDiDGb=DFxYoDePNQDFWqvU1cmxWKDKx0kDY5DwZv8DYPDWxDFfam5MAFwOE9COaBs54D1P=5xfxG1DQ5DscDfzAKD0pSfzmyChbDDEG4OqtYDvxDk3KyF54Gd66H1h1kNPG+KPYxN8jGnahm4SeeKzQiNoPe4zWnxsg=NvqiTlWZD4D=',
-    'ssxmod_itna2': 'euD=qRODCG83G=DXtRxCaDRn8D7nKniimiDAqA=ND/txKwohcq7PGOUcfh3ULphGcDCSBgLKGkbbq7mw9ec72iviGfW7WNoLEO2XxG3WaCyXVFnRIIq5TvexT+6o9M5mmDFqG7zeD===',
+    'acw_tc': '7ae4df2716843012609303161e4c9e65c8fe9dc99466b5ced1692fdaea',
+    'cdn_sec_tc': '7ae4df2716843012609303161e4c9e65c8fe9dc99466b5ced1692fdaea',
+    'acw_sc__v2': '646465cc9b671e34b43a779fa9b28d00a5c50286',
+    'PHPSESSID': '1p9iisnstm8r4gul4csmni02aj',
+    'arp_scroll_position': '0',
+    'ssxmod_itna': 'iq+x9Dc7it0QGQN0=DX3nqDvrqDqErSxO0Gf2mDGN4e3DZDiqAPGhDC+8zYLwSEuAtOmA4rvKvmGipxqPq2nO2tflpe0aDbqGki074iiyDCeDIDWeDiDGR=DFxYoDePNQDFWqvU1cmxWKDKx0kDY5DwZv8DYPDWxDFfgrNfcAFf=vFP/yhDiHqurDxfxG1DQ5DshDf1AKD0pSf1myCG33DEA4OqtYDvxDk3K5H54Gd66H1h1MNqARqqihNNmhnF1R4e0weKnqxVe+edGWxNGhnvyxD=cibITGDD=',
+    'ssxmod_itna2': 'iq+x9Dc7it0QGQN0=DX3nqDvrqDqErSxO0Gf2DGtG9QKRRDBwDK7P4+v8HB71l8dI1TvmhemeQFvk=fOmoxe3wbBgRkTpPci66yb/PmywSeFZ3uPySG=utjDN5Q=k9264p71GsHNV=ZS+G9783q08fgKAUUIuo2YqGFjfABDMbYbxG2Cr4ZAg=4c2Twj+GPnOGtbfhax7=DeLqxD',
 }
 
 headers = {
     'Accept': '*/*',
     'Accept-Language': 'zh-CN,zh;q=0.9',
+    'Acco': '2',
     'Connection': 'keep-alive',
     'Content-Type': 'application/json',
     'Origin': 'https://ur.himayi.cn',
@@ -27,7 +28,7 @@ headers = {
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-origin',
     'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
-    'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJhdWQiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJpYXQiOjE2ODQyNTE4OTYsIm5iZiI6MTY4NDI1MTg5NiwiZXhwIjoxNjg0MzM4Mjk2LCJtZW1iZXJfaW5mbyI6MzEyMDN9.NYCCrsaSQxhh1iqdnSw8K82NCXrnzXI0XxB6XmBzlAI',
+    'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJhdWQiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJpYXQiOjE2ODQzMDEyNjgsIm5iZiI6MTY4NDMwMTI2OCwiZXhwIjoxNjg0Mzg3NjY4LCJtZW1iZXJfaW5mbyI6MzEyMDN9.upCk0wbkr4R8f9SnoJOI9iHonK0Q04p8LJCyqXP8Ku8',
 }
 
 json_data = {
@@ -62,7 +63,6 @@ while True:
                                              headers=headers,
                                              json=json_data_creat)
                     try:
-                        print(response.json())
                         flag = response.json().get('msg') == '点击的太快了呢,请您稍后重试!'
                         while flag:
                             # time.sleep(0.001)
@@ -71,7 +71,10 @@ while True:
                                                      json=json_data_creat)
                             flag = response.json().get('msg') == '点击的太快了呢,请您稍后重试!'
                             if not flag:
-                                print(response.text)
+                                if response.json().get('msg') == 'OK':
+                                    order_id = response.json().get('data').get('order_id')
+                                    order_sn = response.json().get('data').get('order_sn')
+
                     except Exception as e:
                         print(e)
                         print(f'小错误:{e}')
