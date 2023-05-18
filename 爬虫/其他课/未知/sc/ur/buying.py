@@ -7,13 +7,13 @@
 import requests
 import time
 cookies = {
-    'acw_tc': '7ae4df2716843012609303161e4c9e65c8fe9dc99466b5ced1692fdaea',
-    'cdn_sec_tc': '7ae4df2716843012609303161e4c9e65c8fe9dc99466b5ced1692fdaea',
-    'acw_sc__v2': '646465cc9b671e34b43a779fa9b28d00a5c50286',
-    'PHPSESSID': '1p9iisnstm8r4gul4csmni02aj',
+    'acw_tc': '700f252016843069164351454ea0681e020ee7bba8ad27e1294fcfe929',
+    'cdn_sec_tc': '700f252016843069164351454ea0681e020ee7bba8ad27e1294fcfe929',
+    'acw_sc__v2': '64647be4bdb8febd4a8c21fdbbf9e623e85c36b5',
+    'PHPSESSID': 'rje1lfrug11gn76e5m8ppajpsa',
     'arp_scroll_position': '0',
-    'ssxmod_itna': 'iq+x9Dc7it0QGQN0=DX3nqDvrqDqErSxO0Gf2mDGN4e3DZDiqAPGhDC+8zYLwSEuAtOmA4rvKvmGipxqPq2nO2tflpe0aDbqGki074iiyDCeDIDWeDiDGR=DFxYoDePNQDFWqvU1cmxWKDKx0kDY5DwZv8DYPDWxDFfgrNfcAFf=vFP/yhDiHqurDxfxG1DQ5DshDf1AKD0pSf1myCG33DEA4OqtYDvxDk3K5H54Gd66H1h1MNqARqqihNNmhnF1R4e0weKnqxVe+edGWxNGhnvyxD=cibITGDD=',
-    'ssxmod_itna2': 'iq+x9Dc7it0QGQN0=DX3nqDvrqDqErSxO0Gf2DGtG9QKRRDBwDK7P4+v8HB71l8dI1TvmhemeQFvk=fOmoxe3wbBgRkTpPci66yb/PmywSeFZ3uPySG=utjDN5Q=k9264p71GsHNV=ZS+G9783q08fgKAUUIuo2YqGFjfABDMbYbxG2Cr4ZAg=4c2Twj+GPnOGtbfhax7=DeLqxD',
+    'ssxmod_itna': 'GqmOBI4IxGxRxBPGKiQi30Ihj17vq34pdjdD/ADfx4iNDnD8x7YDvG+pK7GY7YW2D2EGmWBG2E=bt1QgRTogrD4GLDmKDyWiaeeDxaq0rD74irDDxD3+xlFkDvxG=DpxGPnDj4i1RxjKDhpP8WDGd3WYqLx0WDCyaD7KDn6BdD4DOnxGCAxDrnxG1Hx07n2BzDYFdk9KDEjKqDG5qnR0QQnEO693ztKopFIovHfgaGUOLvBFCchKDopcAPU9RurHLZ0exbD2Wqn1WHirq7WtPb0ZYGGm4anayHn=D==zNHYD',
+    'ssxmod_itna2': 'GqmOBI4IxGxRxBPGKiQi30Ihj17vq34pdQDSD8wGDeGN+QGaAmm+H1OIa+28EIho9hHxw=By=4qk2kc2mNofqKWfSCn4idDEQAyFzRRfcIhODfOkHnq=x7jaAZraKPPtoQN3p93tYKQDjKD+2GDD',
 }
 
 headers = {
@@ -28,7 +28,7 @@ headers = {
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-origin',
     'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
-    'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJhdWQiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJpYXQiOjE2ODQzMDEyNjgsIm5iZiI6MTY4NDMwMTI2OCwiZXhwIjoxNjg0Mzg3NjY4LCJtZW1iZXJfaW5mbyI6MzEyMDN9.upCk0wbkr4R8f9SnoJOI9iHonK0Q04p8LJCyqXP8Ku8',
+    'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJhdWQiOiJodHRwOlwvXC9pbnNpZGUzXC8iLCJpYXQiOjE2ODQzMDY5NDEsIm5iZiI6MTY4NDMwNjk0MSwiZXhwIjoxNjg0MzkzMzQxLCJtZW1iZXJfaW5mbyI6MzEyMDN9.a1OuHrMZfAmkviQBR4UU5v-Uam4EKCGpr5v0SICwwB8',
 }
 
 json_data = {
@@ -74,7 +74,12 @@ while True:
                                 if response.json().get('msg') == 'OK':
                                     order_id = response.json().get('data').get('order_id')
                                     order_sn = response.json().get('data').get('order_sn')
+                                    json_data = {
+                                        'order_id': order_id,
+                                    }
 
+                                response = requests.post('https://ur.himayi.cn/h5/super/order/getPaySetting',
+                                                         cookies=cookies, headers=headers, json=json_data)
                     except Exception as e:
                         print(e)
                         print(f'小错误:{e}')
