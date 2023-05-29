@@ -46,6 +46,7 @@ for element in info:
     if element not in result:
         result.append(element)
 print(result)
+# 第二种
 unique_info = list(set(tuple(sorted(d.items())) for d in info))
 result = []
 for i in unique_info:
