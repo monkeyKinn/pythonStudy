@@ -66,8 +66,9 @@
 """
 list = ['安琪拉', '妲己', '韩信', '典韦', '吕布']
 # 1.末尾追加两个元素，'小乔','貂蝉'
-list.append('小乔')
-list.append('貂蝉')
+# list.append('小乔')
+# list.append('貂蝉')
+list.extend(['小乔', '貂蝉'])
 # 2.查找'妲己'的索引
 dj_index = list.index('妲己')
 print(dj_index)
