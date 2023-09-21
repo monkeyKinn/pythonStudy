@@ -1,5 +1,4 @@
 import requests
-import json
 
 cookies = {
     "JSESSIONID": "67F5C54B82C53EB4617E3320AC632888",
